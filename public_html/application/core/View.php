@@ -17,17 +17,35 @@ namespace public_html\application\core;
 
     public function render($title, $vars = [])
     {
-        if (file_exists('public_html/application/views/'.$this->path.'.php'))
+        extract($vars);
+        $path = 'public_html/application/views/'.$this->path.'.php';
+        if (file_exists($path))
         {
             ob_start();
-            require  'public_html/application/views/'.$this->path.'.php';
+            require $path;
             $content = ob_get_clean();
             require 'public_html/application/views/layouts/'.$this->layout.'.php';
-        } else
-        {
-            echo 'Вид не найден'.$this->path;
-        }
 
+        }
     }
+
+     public function redirect($url)
+     {
+        header('location: '.$url);
+        exit;
+     }
+
+    public static function errorCode($code)
+    {
+        http_response_code($code);
+        $path =  'public_html/application/views/errors/'.$code.'.php';
+        if (file_exists($path))
+        {
+           require $path;
+        }
+        exit;
+    }
+
+
 
 }

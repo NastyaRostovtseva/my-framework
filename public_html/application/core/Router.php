@@ -1,6 +1,7 @@
 <?php
 namespace public_html\application\core;
-use	public_html\application\core\view;
+use	public_html\application\core\View;
+
 
 
 class Router
@@ -52,15 +53,15 @@ class Router
                }
                else
                {
-                   echo 'Не найден екшен '.$action;
+                   View::errorCode(404);
                }
            } else
            {
-               echo 'Не найден '.$path;
+               View::errorCode(404);
            }
         } else
         {
-            echo 'Маршрут не найден';
+            View::errorCode(404);
         };
 
     }
