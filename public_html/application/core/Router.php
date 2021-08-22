@@ -44,7 +44,9 @@ class Router
         if($this->match())
         {
            $path = 'public_html\application\controllers\\'.ucfirst($this->params['controller']).'Controller';
-           if (class_exists($path)) {
+
+           if (class_exists($path))
+           {
                $action = $this->params['action'].'Action';
                if(method_exists($path, $action))
                {
