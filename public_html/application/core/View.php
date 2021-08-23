@@ -15,6 +15,7 @@ namespace public_html\application\core;
         $this->path = $route['controller'].'/'.$route['action'];
     }
 
+
     public function render($title, $vars = [])
     {
         extract($vars);
@@ -46,6 +47,13 @@ namespace public_html\application\core;
         exit;
     }
 
+    public function message($status, $message)
+    {
+        exit(json_encode(['status' => $status, 'message' => $message]));
+    }
 
-
+     public function location($url)
+     {
+         exit(json_encode(['url' => $url]));
+     }
 }
