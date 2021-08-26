@@ -54,6 +54,6 @@ namespace public_html\application\core;
 
      public function location($url)
      {
-         exit(json_encode(['url' => $url]));
+         exit(json_encode(['url' => $url],JSON_UNESCAPED_SLASHES));
      }
 }
