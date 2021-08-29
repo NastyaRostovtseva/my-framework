@@ -10,14 +10,21 @@ class MainController extends Controller
     {
         $this->view->render('Главная страница');
     }
+
     public function aboutAction()
     {
         $this->view->render('Обо мне');
     }
+
     public function contactAction()
     {
         if (!empty($_POST)){
-            $this->view->message('success', 'форма работает');
+            if (!$this->model->contactValidate($_POST))
+            {
+                $this->view->message('error', $this->model->error);
+            }
+            mail($_POST['email'], 'Сообщение из блога', $_POST['name'].'|'.$_POST['email'].'|'.$_POST['text']);
+            $this->view->message('success', 'Сообщение отправлено администратору');
         }
         $this->view->render('Контакты');
     }

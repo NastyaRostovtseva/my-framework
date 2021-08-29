@@ -20,8 +20,7 @@ namespace public_html\application\core;
     {
         extract($vars);
         $path = 'public_html/application/views/'.$this->path.'.php';
-        if (file_exists($path))
-        {
+        if (file_exists($path)) {
             ob_start();
             require $path;
             $content = ob_get_clean();
@@ -40,8 +39,7 @@ namespace public_html\application\core;
     {
         http_response_code($code);
         $path =  'public_html/application/views/errors/'.$code.'.php';
-        if (file_exists($path))
-        {
+        if (file_exists($path)) {
            require $path;
         }
         exit;
@@ -49,7 +47,7 @@ namespace public_html\application\core;
 
     public function message($status, $message)
     {
-        exit(json_encode(['status' => $status, 'message' => $message]));
+        exit(json_encode(['status' => $status, 'message' => $message],JSON_UNESCAPED_UNICODE));
     }
 
      public function location($url)

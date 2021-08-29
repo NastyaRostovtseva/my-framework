@@ -63,7 +63,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <p class="copyright text-muted">&copy; 2017, Видеоуроки PHP</p>
+                        <p class="copyright text-muted"> 2017, Видеоуроки PHP</p>
                     </div>
                 </div>
             </div>
