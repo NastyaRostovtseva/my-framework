@@ -31,7 +31,7 @@ namespace public_html\application\core;
 
      public function redirect($url)
      {
-        header('location: '.$url);
+        header('location: /'.$url);
         exit;
      }
 
