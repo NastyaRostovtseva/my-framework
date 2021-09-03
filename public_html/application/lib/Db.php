@@ -57,7 +57,7 @@ class Db
         $colums = sprintf('(%s)', implode(',', array_keys($params)));
         $masks = sprintf('(:%s)', implode(', :', array_keys($params)));
 
-        $sql = sprintf('INSERT INTO %s %s VALUES %s', $table, $colums,$masks);
+        $sql = sprintf('INSERT INTO %s %s VALUES %s', $table, $colums, $masks);
 
         $stmt = $this->db->prepare($sql);
         $stmt->execute($params);
