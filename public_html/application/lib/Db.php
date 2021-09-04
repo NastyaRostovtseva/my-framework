@@ -18,9 +18,7 @@ class Db
     {
         $stmt = $this->db->prepare($sql);
 
-        if(!empty($params))
-        {
-
+        if(!empty($params)) {
             foreach ($params as $key => $val) {
                 if (is_int($val)) {
                     $type = PDO::PARAM_INT;

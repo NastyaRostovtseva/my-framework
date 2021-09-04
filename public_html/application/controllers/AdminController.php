@@ -3,6 +3,8 @@
 namespace public_html\application\controllers;
 
 use public_html\application\core\Controller;
+use public_html\application\lib\Pagination;
+use public_html\application\models\Main;
 
 
 class AdminController extends Controller
@@ -85,7 +87,13 @@ class AdminController extends Controller
 
     public function postsAction()
     {
-        $this->view->render('Посты');
+        $mainModel = new Main;
+        $pagination = new Pagination($this->route, $mainModel->postsCount());
+        $vars = [
+            'pagination' => $pagination->get(),
+            'list' => $mainModel->postsList($this->route),
+        ];
+        $this->view->render('Посты', $vars);
     }
 
 }

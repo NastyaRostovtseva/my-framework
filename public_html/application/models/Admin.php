@@ -55,7 +55,7 @@ class Admin extends Model {
         $img = new Imagick($path);
         $img->cropThumbnailImage(1080, 600);
         $img->setImageCompressionQuality(80);
-        $dir =  str_replace ('\application\models', '\public\materials\\'.$id.'.jpg' , __DIR__ );
+        $dir =  str_replace('\application\models', '\public\materials\\'.$id.'.jpg' , __DIR__ );
 
         $img->writeImage($dir);
     }
@@ -66,7 +66,8 @@ class Admin extends Model {
             'id' => $id,
         ];
         $this->db->query('DELETE FROM posts WHERE id = :id', $params);
-        unlink('public/materials/'.$id.'.jpg');
+        $dir =  str_replace('\application\models', '\public\materials\\'.$id.'.jpg' , __DIR__ );
+        unlink($dir);
     }
 
     public function isPostExists($id)
