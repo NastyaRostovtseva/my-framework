@@ -37,6 +37,7 @@ class MainController extends Controller
         }
         $this->view->render('Контакты');
     }
+
     public function postAction()
     {
         $adminModel = new Admin;

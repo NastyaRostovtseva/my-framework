@@ -19,7 +19,7 @@
                 <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
                     <i class="fa fa-bars"></i>
                 </button>
-                <div class="collapse navbar-collapse" id="navbarResponsive">
+                <div class="collapse navbar-collapse d-grid gap-2 d-md-flex justify-content-md-end" id="navbarResponsive">
                     <ul class="navbar-nav ml-auto">
                         <li class="nav-item">
                             <a class="nav-link" href="/about">Обо мне</a>
@@ -27,6 +27,10 @@
                         <li class="nav-item">
                             <a class="nav-link" href="/contact">Обратная связь</a>
                         </li>
+
+                        <div class="buttonLogin">
+                            <a class="btn btn-outline-success my-2 my-sm-0" href="/admin/login" role="button">Войти</a>
+                        </div>
                     </ul>
                 </div>
             </div>
@@ -39,7 +43,7 @@
                     <div class="col-lg-8 col-md-10 mx-auto">
                         <ul class="list-inline text-center">
                             <li class="list-inline-item">
-                                <a href="https://www.youtube.com/user/Shift63770" target="_blank">
+                                <a href="/" target="_blank">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
                                         <i class="fa fa-youtube fa-stack-1x fa-inverse"></i>
@@ -47,7 +51,7 @@
                                 </a>
                             </li>
                             <li class="list-inline-item">
-                                <a href="https://vk.com/php.youtube" target="_blank">
+                                <a href="/" target="_blank">
                                     <span class="fa-stack fa-lg">
                                         <i class="fa fa-circle fa-stack-2x"></i>
                                         <i class="fa fa-vk fa-stack-1x fa-inverse"></i>
@@ -63,7 +67,7 @@
                                 </a>
                             </li>
                         </ul>
-                        <p class="copyright text-muted"> 2017, Видеоуроки PHP</p>
+                        <p class="copyright text-muted"> 2021</p>
                     </div>
                 </div>
             </div>

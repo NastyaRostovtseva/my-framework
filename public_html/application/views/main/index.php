@@ -1,10 +1,10 @@
-<header class="masthead" style="background-image: url('/public_html/public/images/home-bg.jpg')">
+<header class="masthead" style="background-image: url('/public_html/public/images/world-in-hands.jpg')">
     <div class="container">
         <div class="row">
             <div class="col-lg-8 col-md-10 mx-auto">
                 <div class="site-heading">
-                    <h1>Видеоуроки PHP</h1>
-                    <span class="subheading">простой блог на php - oop - mvc</span>
+                    <h1>Авторский блог о путешествиях</h1>
+                    <span class="subheading">справочник самостоятельного путешественника, в котором неопытные покорители мира найдут много полезной информации</span>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
                             <h2 class="post-title"><?php echo htmlspecialchars($val['name'], ENT_QUOTES); ?></h2>
                             <h5 class="post-subtitle"><?php echo htmlspecialchars($val['description'], ENT_QUOTES); ?></h5>
                         </a>
-                        <p class="post-meta">Идентфикатор этого поста <?php echo $val['id']; ?></p>
+                        <p class="post-meta">Идентификатор этого поста <?php echo $val['id']; ?></p>
                     </div>
                     <hr>
                 <?php endforeach; ?>

@@ -41,6 +41,12 @@
                             <span class="nav-link-text">Выход</span>
                             </a>
                         </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="/">
+
+                                <span class="nav-link-text">Главная страница</span>
+                            </a>
+                        </li>
                     </ul>
                 </div>
             </nav>
@@ -50,7 +56,7 @@
             <footer class="sticky-footer">
                 <div class="container">
                     <div class="text-center">
-                        <small>&copy; 2017, Видеоуроки PHP</small>
+                        <small>&copy; 2021</small>
                     </div>
                 </div>
             </footer>
